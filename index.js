@@ -8,8 +8,8 @@ async function dataNomeEstados() {
         const response = await fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados");
         const jsonData = await response.json()
   
-        generateInfoSection(jsonData.nome.front_default)
-    } catch (error) {s
+        generateInfoSection(jsonData.nome.front_default, nome)
+    } catch (error) {
       console.error(error)
     }
 }
